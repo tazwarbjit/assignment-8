@@ -13,8 +13,16 @@ public class Main {
         System.out.println("=============================================");
 
         System.out.println("Employees after adding");
-        Employee newEmployee = new Employee("Mahnoor", "Marium", "Banani", 90000, 1, 1);
-        dbObj.addEmployee(newEmployee);
+        Employee e1 = new Employee("Mahnoor", "Marium", "Banani", 90000, 1, 1);
+        dbObj.addEmployee(e1);
+        Employee e2 = new Employee("Shahriar", "Nafis", "Dhanmondi", 80000, 1, 1);
+        dbObj.addEmployee(e2);
+        dbObj.fetchEmployeeData();
+
+        System.out.println("=============================================");
+
+        System.out.println("Employees after deleting");
+        dbObj.deleteEmployee();
         dbObj.fetchEmployeeData();
     }
 }

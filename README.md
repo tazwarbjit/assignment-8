@@ -1,4 +1,4 @@
-# JDBC Implementaion
+# JDBC Implementation
 
 ## There are three main operations:
 1. Select all employee records with details by joining tables

@@ -38,13 +38,18 @@ public class DBOperations {
         }
     }
 
-//    public void addEmployee() {
-//        try {
-//            ResultSet rs = stmt.executeQuery("SELECT * FROM employee;");
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    public void addEmployee(Employee employee) {
+        try {
+            int count = stmt.executeUpdate("INSERT INTO employee (first_name, last_name, address, salary, department_id, role_id)\n" +
+                    "VALUES ('"+employee.getFirstName()+"', '"+employee.getLastName()
+                    +"', '"+employee.getAddress()+"', "+employee.getSalary()+", "+employee.getDepartmentID()+", "
+                    +employee.getRoleID()+")");
+            System.out.println("Row inserted.............................");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 //
 //    public void deleteEmployee() {
 //        try {
